@@ -1,3 +1,19 @@
+
+3 µCs project communicating with each other using a CAN bus to store data from 3 sensors units in some flash memory
+    Master node: ESP32-S3 + SPI sensing unit + CAN bus + 8MB of PSRAM + 16MB of NAND flash
+    Slave node 0: STM32-U3 + SPI sensing unit + CAN bus
+    Slave node 1: STM32-U3 + SPI sensing unit + CAN bus + BMS + LiPo battery
+Generate the plan to design code & test each µC program (3 programs: one for each µC)
+
+Project phase definition:
+phase A:
+
+
+This project has multiple phase, You will create a new directory for this project and multiple sub-directories for each phase. Choose the name wisely.
+
+
+sensor data temporal offset / bias calibration is done using the Unexpected Maker Pro S3 board as a reference clock source.
+
 This project is an IoT sensors data-logger that stores its acquired content to an SD card and can communicate it to an external station (a device or a web-server).
 
 This project has multiple phase, You will create a new directory for this project and multiple sub-directories for each phase. Choose the name wisely.
@@ -51,7 +67,8 @@ For phase B and C:
 For all phases: create an app interface to start and close the BLE or the wifi connection properly.
 
 Generate the plan to design code & test this project.
-code it in C and/or C++ with real-time constraints. You can optimize the task preemption by using freeRTOS or not. You decide what's best in order to achieve the best sensors acquisition and have the finest recordings and best microcontroller performance.
+Make an seperate FSD (functionnal specification document) file for each phases the project.
+Code it in C and/or C++ with real-time constraints. You can optimize the task preemption by using freeRTOS or not. You decide what's best in order to achieve the best sensors acquisition and have the finest recordings and best microcontroller performance.
 Name each sensors data wisely so that each sensors variables can be identified easily by 
 - sensor module name
 - sensor type
